@@ -2,7 +2,7 @@ export const DRESSLIST = [
   {
     name: "Amethyst Glow",
     pic: "photos/amethyst_glow.png",
-    dsc: "A beautiful",
+    dsc: "A beautiul",
     color: "purple",
     price: 800
   },
