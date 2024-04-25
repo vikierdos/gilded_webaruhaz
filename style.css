@@ -1,8 +1,9 @@
 body{
-    background-color: #241A0E;
+    background-image: url("/photos/background.png");
     color: #F5D99C;
 }
 main {
+    background-color: #241a01;
     width: 90%;
     max-width: 1000px;
     margin: auto;
@@ -12,11 +13,25 @@ main {
     
 }
 
-.navbar-brown{
-    background-color: #553F20;
-    color: #F5D99C;
+
+.adatok{
+    display: flex;
+    flex-wrap: wrap;
+}
+.adatok div{
+    flex: 0 0 30%;
 }
 
-bg-brown{
-    background-color:v #77582D;
+img{
+    width: 100%;
+}
+
+.kartya{
+    padding: 20px;
+}
+.kartya-header{
+    height: 40px;
+}
+.kartya-header h2{
+    font-size: 25px;
 }
