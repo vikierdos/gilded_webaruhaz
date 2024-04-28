@@ -1,13 +1,14 @@
 import { DRESSLIST } from "./adat.js";
-import { kartyaKiir, kartyaLetrehoz, kartyaSzuro, kartyaRendezo} from "./fuggvenyek.js";
+import { kartyaKiir, kartyaLetrehoz, kartyaSzuro, kartyaRendezo, kosarba, tablaLetrehoz} from "./fuggvenyek.js";
 
 init(DRESSLIST);
 kartyaSzures(DRESSLIST);
 
 function init(list){
     let txt = kartyaLetrehoz(list);
-    kartyaKiir(txt, ".adatok");
+    kartyaKiir(txt,".adatok");
     kartyaRendezes(list);
+    kosarbaTenni(list);
 }
 
 function kartyaSzures(list){
@@ -23,7 +24,7 @@ function kartyaRendezes(list){
 
     var rendezes = 1;
     rendezELEM.on("change", function (){
-        let rval = rendezELEM.val().split("_")
+        let rval = rendezELEM.val().split("_");
         if( rval[1] == "desc"){
             rendezes = -1;
         }
@@ -32,5 +33,16 @@ function kartyaRendezes(list){
         }
         let szoveg = kartyaRendezo(list, rval[0], rendezes)
         init(szoveg)
+    });
+}
+let klist = [];
+function kosarbaTenni(list){
+    const kosarbaELEM = $(".kosarba");
+    kosarbaELEM.on("click", function(event){
+        let index = event.target.closest("button").id;
+        klist = kosarba(list, index, klist);
+        let txt = "";
+        txt = tablaLetrehoz(klist, txt)
+        kartyaKiir(txt, ".kosar")
     });
 }

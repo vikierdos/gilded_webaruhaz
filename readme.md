@@ -1,3 +1,6 @@
+# Specifikáció
+
+
 # Függvények
 1. kartyaLetrehoz(list) -> txt -- Létrehozza a kártyákat egy szöveges változóba, amit visszaad
 2. kartyaKiir(txt, div) -- Megjelenít egy szöveges változót az oldalon
