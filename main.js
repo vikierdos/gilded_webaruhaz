@@ -41,8 +41,7 @@ function kosarbaTenni(list){
     kosarbaELEM.on("click", function(event){
         let index = event.target.closest("button").id;
         klist = kosarba(list, index, klist);
-        let txt = "";
-        txt = tablaLetrehoz(klist, txt)
-        kartyaKiir(txt, ".kosar")
+        let txt = tablaLetrehoz(klist);
+        kartyaKiir(txt, "#cart");
     });
 }

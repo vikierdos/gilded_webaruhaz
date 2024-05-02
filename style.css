@@ -1,12 +1,13 @@
 body{
-    background-image: url("/photos/background.png");
-    color: #F5D99C;
+    background-color: #f5e7f3;
+    
 }
 main {
-    background-color: #241a01;
+    background-color: #e5d8ec;
     width: 90%;
     max-width: 1000px;
     margin: auto;
+    padding-bottom: 50px;
 }
 .tablazat{
     width: 100%;
@@ -34,4 +35,13 @@ img{
 }
 .kartya-header h2{
     font-size: 25px;
+}
+footer{
+    background-color: #f5e7f3;
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
 }
